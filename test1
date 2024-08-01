@@ -1,0 +1,10 @@
+import pandas as pd
+da=pd.read_csv(r'C:\5thsemai\jayn.csv')
+
+df=pd.DataFrame(da)
+sa=df.describe()
+ei=df[df["cylinders"]==8]
+ye = df.groupby('modelyear')["modelyear"].count()
+print("Satistical Dataframe:\n",sa)
+print("\n8 cylinders:\n",ei)
+print("\nBy year:\n",ye)
